@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learnify - Your Learning Journey Starts Here</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom scroll-to-top button styles */
+        #scrollToTopBtn {
+            display: none; /* Hidden by default */
+            position: fixed; /* Fixed/sticky position */
+            bottom: 20px; /* Place the button at the bottom of the page */
+            right: 30px; /* Place the button at the right side */
+            z-index: 99; /* Make sure it does not overlap */
+            border: none; /* Remove borders */
+            outline: none; /* Remove outline */
+            background-color: #4F46E5; /* Set a background color */
+            color: white; /* Text color */
+            cursor: pointer; /* Add a mouse pointer on hover */
+            padding: 15px; /* Some padding */
+            border-radius: 10px; /* Rounded corners */
+            font-size: 18px; /* Increase font size */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        #scrollToTopBtn:hover {
+            background-color: #6366F1; /* Darker background on hover */
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header/Navigation Bar -->
+    <header class="bg-white shadow-md py-4 sticky top-0 z-50 rounded-b-lg">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <a href="#" class="text-3xl font-bold text-indigo-700">Learnify</a>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#courses" class="text-gray-600 hover:text-indigo-700 font-medium transition duration-300">Courses</a></li>
+                    <li><a href="about.html" class="text-gray-600 hover:text-indigo-700 font-medium transition duration-300">About & Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-20 px-4 rounded-xl mx-auto my-8 max-w-7xl shadow-xl">
+        <div class="container mx-auto text-center">
+            <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6">Unlock Your Potential with Learnify</h1>
+            <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto">Discover expert-led courses in technology, arts, business, and more. Your journey to knowledge starts here.</p>
+            <div class="flex justify-center space-x-4">
+                <a href="#courses" class="px-10 py-4 bg-white text-indigo-700 font-bold rounded-full shadow-lg hover:bg-gray-100 hover:scale-105 transform transition duration-300 ease-in-out">
+                    Explore Courses
+                </a>
+                <!-- New 'Register Now!' button -->
+                <a href="#" class="px-10 py-4 bg-yellow-400 text-yellow-900 font-bold rounded-full shadow-lg hover:bg-yellow-500 hover:scale-105 transform transition duration-300 ease-in-out">
+                    Register Now!
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Details Section -->
+    <section id="courses" class="py-16 px-4 bg-white rounded-xl mx-auto my-8 max-w-7xl shadow-xl">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center text-indigo-800 mb-12">Our Popular Courses</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+                <!-- Course Card 1 -->
+                <div class="bg-gray-50 rounded-lg shadow-lg p-6 border border-gray-200 hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <img src="https://placehold.co/400x250/E0E7FF/4F46E5?text=Web+Development" alt="Web Development Course" class="rounded-md mb-4 w-full h-48 object-cover">
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-3">Full-Stack Web Development</h3>
+                    <p class="text-gray-600 mb-4">Master front-end and back-end development with hands-on projects. Learn React, Node.js, and databases.</p>
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-xl font-bold text-green-600">$499</span>
+                        <span class="text-sm text-gray-500">120 Hours</span>
+                    </div>
+                    <button class="w-full bg-indigo-500 text-white py-3 rounded-md font-semibold hover:bg-indigo-600 transition duration-300 shadow-md">
+                        Register
+                    </button>
+                </div>
+
+                <!-- Course Card 2 -->
+                <div class="bg-gray-50 rounded-lg shadow-lg p-6 border border-gray-200 hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <img src="https://placehold.co/400x250/FFEFD5/FFA500?text=Data+Science" alt="Data Science Course" class="rounded-md mb-4 w-full h-48 object-cover">
+                    <h3 class="text-2xl font-semibold text-orange-600 mb-3">Introduction to Data Science</h3>
+                    <p class="text-gray-600 mb-4">Dive into data analysis, machine learning, and visualization using Python and R.</p>
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-xl font-bold text-green-600">$599</span>
+                        <span class="text-sm text-gray-500">100 Hours</span>
+                    </div>
+                    <button class="w-full bg-orange-500 text-white py-3 rounded-md font-semibold hover:bg-orange-600 transition duration-300 shadow-md">
+                        Register
+                    </button>
+                </div>
+
+                <!-- Course Card 3 -->
+                <div class="bg-gray-50 rounded-lg shadow-lg p-6 border border-gray-200 hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <img src="https://placehold.co/400x250/D1FAE5/065F46?text=Graphic+Design" alt="Graphic Design Course" class="rounded-md mb-4 w-full h-48 object-cover">
+                    <h3 class="text-2xl font-semibold text-teal-700 mb-3">Graphic Design Masterclass</h3>
+                    <p class="text-gray-600 mb-4">Unleash your creativity. Learn Photoshop, Illustrator, and design principles.</p>
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-xl font-bold text-green-600">$349</span>
+                        <span class="text-sm text-gray-500">80 Hours</span>
+                    </div>
+                    <button class="w-full bg-teal-500 text-white py-3 rounded-md font-semibold hover:bg-teal-600 transition duration-300 shadow-md">
+                        Register
+                    </button>
+                </div>
+
+                <!-- Course Card 4 -->
+                <div class="bg-gray-50 rounded-lg shadow-lg p-6 border border-gray-200 hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <img src="https://placehold.co/400x250/D1E7F1/1C64F2?text=Digital+Marketing" alt="Digital Marketing Course" class="rounded-md mb-4 w-full h-48 object-cover">
+                    <h3 class="text-2xl font-semibold text-blue-700 mb-3">Comprehensive Digital Marketing</h3>
+                    <p class="text-gray-600 mb-4">Learn SEO, SEM, social media marketing, and content strategy.</p>
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-xl font-bold text-green-600">$399</span>
+                        <span class="text-sm text-gray-500">90 Hours</span>
+                    </div>
+                    <button class="w-full bg-blue-500 text-white py-3 rounded-md font-semibold hover:bg-blue-600 transition duration-300 shadow-md">
+                        Register
+                    </button>
+                </div>
+
+                <!-- Course Card 5 -->
+                <div class="bg-gray-50 rounded-lg shadow-lg p-6 border border-gray-200 hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <img src="https://placehold.co/400x250/FBE8FF/8B5CF6?text=Mobile+App+Dev" alt="Mobile App Development Course" class="rounded-md mb-4 w-full h-48 object-cover">
+                    <h3 class="text-2xl font-semibold text-purple-700 mb-3">Mobile App Development (React Native)</h3>
+                    <p class="text-gray-600 mb-4">Build cross-platform mobile applications for iOS and Android.</p>
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-xl font-bold text-green-600">$549</span>
+                        <span class="text-sm text-gray-500">110 Hours</span>
+                    </div>
+                    <button class="w-full bg-purple-500 text-white py-3 rounded-md font-semibold hover:bg-purple-600 transition duration-300 shadow-md">
+                        Register
+                    </button>
+                </div>
+
+                <!-- Course Card 6 -->
+                <div class="bg-gray-50 rounded-lg shadow-lg p-6 border border-gray-200 hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <img src="https://placehold.co/400x250/FFF3CD/D97706?text=Cybersecurity" alt="Cybersecurity Course" class="rounded-md mb-4 w-full h-48 object-cover">
+                    <h3 class="text-2xl font-semibold text-yellow-700 mb-3">Cybersecurity Fundamentals</h3>
+                    <p class="text-gray-600 mb-4">Understand network security, ethical hacking, and threat mitigation.</p>
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-xl font-bold text-green-600">$479</span>
+                        <span class="text-sm text-gray-500">95 Hours</span>
+                    </div>
+                    <button class="w-full bg-yellow-500 text-white py-3 rounded-md font-semibold hover:bg-yellow-600 transition duration-300 shadow-md">
+                        Register
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 px-4 rounded-t-lg">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 Learnify. All rights reserved.</p>
+            <div class="flex justify-center space-x-6 mt-4">
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a>
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">
+        &#9650; <!-- Unicode for an upward pointing triangle -->
+    </button>
+
+    <script>
+        // Get the button
+        let mybutton = document.getElementById("scrollToTopBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+    </script>
+</body>
+</html>
